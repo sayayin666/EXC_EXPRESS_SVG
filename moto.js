@@ -1,4 +1,4 @@
-import Vehiculo from "./vehiculo";
+const Vehiculo = require('./vehiculo');
 
 class Moto extends Vehiculo {
     constructor(marca, modelo, capacidad, tipoCarga, numeroEjes, potencia) {
