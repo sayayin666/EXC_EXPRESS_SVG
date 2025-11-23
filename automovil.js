@@ -1,15 +1,18 @@
 const Vehiculo = require('./vehiculo');
 
 class Carro extends Vehiculo {
-    constructor(marca, modelo, capacidad, tipoCarga, numeroEjes, potencia) {
+    constructor(marca, modelo, capacidad, potencia) {
         super(marca, modelo, capacidad);
-        this.tipoCarga = tipoCarga;
-        this.numeroEjes = numeroEjes;
         this.potencia = potencia;
     }
-    mostrarInfo() {
-        return `el carro de marca: ${this.getMarca()}, tiene como modelo: ${this.getModelo()}, con una capacidad de: ${this.getCapacidad()} KG's, 
-        con un tipo de carga de elemento: ${this.tipoCarga}, tiene como numero de ejes: ${this.numeroEjes}, y una potencia máxima de: ${this.potencia} NT's/mts`
+    consultar() {
+        return `consultando el carro con marca: ${this.marca}, con modelo: ${this.modelo}, de capacidad: ${this.capacidad} litros, que tiene: ${this.potencia} HP's`
+    }
+    registar() {
+        return `registrando el carro con marca: ${this.marca}, con modelo: ${this.modelo}, de capacidad: ${this.capacidad} litros, que tiene: ${this.potencia} HP's`
+    }
+    administrar() {
+        return `administrando el carro con marca: ${this.marca}, con modelo: ${this.modelo}, de capacidad: ${this.capacidad} litros, que tiene: ${this.potencia} HP's`
     }
 }
 module.exports=Carro;

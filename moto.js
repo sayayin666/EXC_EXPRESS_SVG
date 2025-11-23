@@ -1,15 +1,18 @@
 const Vehiculo = require('./vehiculo');
 
 class Moto extends Vehiculo {
-    constructor(marca, modelo, capacidad, tipoCarga, numeroEjes, potencia) {
+    constructor(marca, modelo, capacidad, numeroEjes) {
         super(marca, modelo, capacidad);
-        this.elTipo_deCarga = tipoCarga;
         this.losNumeros_deEjes = numeroEjes;
-        this.laPotencia = potencia;
     }
-    mostrarInfo() {
-        return `la moto de la marca: ${this.getMarca()}, tiene como modelo: ${this.getModelo()}, una capacidad de: ${this.getCapacidad()}
-        con un tipo de carga de elemento: ${this.elTipo_deCarga}, tiene como numero de ejes: ${this.losNumeros_deEjes}, y una potencia máxima de: ${this.laPotencia} NT's/mts `
+    consultar() {
+        return `consultando la moto con marca: ${this.marca}, con modelo: ${this.modelo}, de capacidad: ${this.capacidad} HP's, que tiene: ${this.numeroEjes} numeros de ejes`
+    }
+    registar() {
+        return `registrando la moto con marca: ${this.marca}, con modelo: ${this.modelo}, de capacidad: ${this.capacidad} HP's, que tiene: ${this.numeroEjes} numeros de ejes`
+    }
+    administrar() {
+        return `administrando la moto con marca: ${this.marca}, con modelo: ${this.modelo}, de capacidad: ${this.capacidad} HP's, que tiene: ${this.numeroEjes} numeros de ejes`
     }
 }
 module.exports=Moto;

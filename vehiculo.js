@@ -7,12 +7,40 @@ class Vehiculo {
         this.#modelo = modelo;
         this.#capacidad = capacidad;
     }
-    getMarca() {return this.#marca}
-    getModelo() {return this.#modelo}
-    getCapacidad() {return this.#capacidad}
+    get marca() {
+        return this.#marca
+    }
+    set marca(valor) {
+        return this.#marca = valor
+    }
 
-    mostrarInfo() {
-        return `el vehiculo de la marca: ${this.getMarca()}, tiene como modelo: ${this.getModelo()}, y una capacidad de: ${this.getCapacidad()} KG's`
+
+    get modelo() {
+        return this.#modelo
+    }
+    set modelo(valor) {
+        return this.#modelo = valor
+    }
+
+
+    get capacidad() {
+        return this.#capacidad
+    }
+    set capacidad(valor) {
+        return this.#capacidad = valor
+    }
+
+
+    consultar() {
+        return `el vehiculo consultado tiene como marca: ${this.#marca}, como modelo: ${this.#modelo}, y una capacidad de: ${this.#capacidad} KG's`
+    }
+
+    registar() {
+        return `el vehiculo consultado tiene como marca: ${this.#marca}, como modelo: ${this.#modelo}, y una capacidad de: ${this.#capacidad} KG's`
+    }
+
+    administrar() {
+        return `el vehiculo consultado tiene como marca: ${this.#marca}, como modelo: ${this.#modelo}, y una capacidad de: ${this.#capacidad} KG's`
     }
 }
 module.exports=Vehiculo;
